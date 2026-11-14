@@ -1,0 +1,22 @@
+.detalles-box {
+  background-color: #f8f9fa;
+  border: 2px solid #ffc107;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.detalles-box h1 {
+  font-size: 1.4rem;
+  color: #d39e00;
+  margin-bottom: 10px;
+}
+
+.detalles-box span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}

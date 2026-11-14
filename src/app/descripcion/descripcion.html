@@ -1,0 +1,59 @@
+<div class="container mt-4" *ngIf="productoSeleccionado">
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent p-0">
+      <li class="breadcrumb-item"><a routerLink="/" class="text-decoration-none">Volver al listado</a></li>
+      <li class="breadcrumb-item text-muted">Computación</li>
+      <li class="breadcrumb-item text-muted">Accesorios para PC Gaming</li>
+      <li class="breadcrumb-item active" aria-current="page">Audífonos</li>
+    </ol>
+  </nav>
+
+  <div class="row bg-white p-4 shadow-sm rounded border">
+    <div class="col-md-1 text-center d-flex flex-column gap-2">
+      <img [src]="productoSeleccionado.imagenUrl" class="img-thumbnail border-primary cursor-pointer" alt="Thumb">
+      <img [src]="productoSeleccionado.imagenUrl" class="img-thumbnail cursor-pointer" alt="Thumb">
+      <img [src]="productoSeleccionado.imagenUrl" class="img-thumbnail cursor-pointer" alt="Thumb">
+    </div>
+    
+    <div class="col-md-7 text-center">
+      <img [src]="productoSeleccionado.imagenUrl" class="img-fluid" style="max-height: 450px; object-fit: contain;" [alt]="productoSeleccionado.nombre">
+    </div>
+
+    <div class="col-md-4 border-start ps-4">
+      <span class="text-muted small">Nuevo | 202 vendidos</span>
+      <h1 class="h5 fw-bold mt-1 text-dark">{{ productoSeleccionado.nombre }}</h1>
+      
+      <div class="text-warning mb-2" style="font-size: 0.9rem;">
+        ★★★★☆ <span class="text-muted small">9 opiniones</span>
+      </div>
+
+      <div class="display-6 fw-light mb-1 text-dark">
+        U$S {{ productoSeleccionado.precio }}
+      </div>
+      <div class="text-muted small mb-3">Bs. 12,12</div>
+      <a href="#" class="text-primary small text-decoration-none d-block mb-3">Ver los medios de pago</a>
+
+      <div class="text-success fw-bold small">
+        <i class="bi bi-truck"></i> {{ productoSeleccionado.tipoEnvio }}
+      </div>
+      <div class="text-muted small">Barquisimeto, Lara</div>
+      <a href="#" class="text-primary small text-decoration-none d-block mb-4">Ver costos de envío</a>
+
+      <div class="mb-3">
+        <strong class="text-dark">Color:</strong> <span class="text-muted">Negro</span>
+      </div>
+
+      <div class="mb-4">
+        <strong class="text-dark">Cantidad:</strong> 
+        <select class="form-select form-select-sm d-inline-block w-auto ms-2">
+          <option>1 unidad</option>
+        </select>
+        <span class="text-muted small ms-1">(8 disponibles)</span>
+      </div>
+
+      <button class="btn btn-primary w-100 py-2 fw-semibold mb-2 shadow-sm">Comprar ahora</button>
+      <button class="btn btn-light text-primary w-100 py-2 fw-semibold border">Agregar al carrito</button>
+    </div>
+  </div>
+</div>

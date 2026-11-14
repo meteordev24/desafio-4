@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
-    "desafio1": {
+    "desafio2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -24,9 +25,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css", "node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss"]
           },
           "configurations": {
             "production": {
@@ -56,16 +55,19 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "desafio1:build:production"
+              "buildTarget": "desafio2:build:production"
             },
             "development": {
-              "buildTarget": "desafio1:build:development"
+              "buildTarget": "desafio2:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
